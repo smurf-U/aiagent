@@ -1,0 +1,27 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Secrets
+.env
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Local databases (threads, tasks, agent state)
+data/
+
+# macOS
+.DS_Store
+
+# Tool-generated symlinks into the local .venv (dangling elsewhere)
+.agents/skills/developing-with-streamlit
+.claude/skills/developing-with-streamlit

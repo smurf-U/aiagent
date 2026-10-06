@@ -1,0 +1,14 @@
+services:
+  # Task queue + live event bus for the API and the agent worker.
+  redis:
+    image: redis:7-alpine
+    container_name: deepagents-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: ["redis-server", "--appendonly", "yes"]
+    restart: unless-stopped
+
+volumes:
+  redis-data:
